@@ -1,0 +1,403 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Sublime text3 自定义快捷键 | bishiyan&#39;s blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="bsy">
+    
+    <meta name="description" content="2013-12-05 11:05 6726人阅读 评论(3) 收藏 举报我的sublime text 3 快捷键配置。强烈推荐下面标红的快捷键，谁用谁知道，编码的时候再也不用依赖方向键和鼠标了。
+[
+//=======================我的快捷键====================">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="bishiyan&#39;s blog" title="bishiyan&#39;s blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="bishiyan&#39;s blog">bishiyan&#39;s blog</a></h1>
+				<h2 class="blog-motto">Good Good Study,Day Day Up!</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:github.com/bishyan/best.git">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/06/07/Sublime-text3-自定义快捷键/" title="Sublime text3 自定义快捷键" itemprop="url">Sublime text3 自定义快捷键</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="https://github.com/bishyan/best.git" title="bsy">bsy</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2015-06-07T02:50:59.000Z" itemprop="datePublished">2015-06-07</time>
+    更新日期:<time datetime="2015-06-07T02:58:53.673Z" itemprop="dateModified">2015-06-07</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+		</div>
+		
+		<p>2013-12-05 11:05 6726人阅读 评论(3) 收藏 举报<br>我的sublime text 3 快捷键配置。<br>强烈推荐下面标红的快捷键，谁用谁知道，编码的时候再也不用依赖方向键和鼠标了。</p>
+<pre><code>[
+//=======================我的快捷键=======================//
+// 删除当前行
+&lt;font color=<span class="string">"red"</span>&gt;{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"ctrl+d"</span>]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"run_macro_file"</span></span>, "<span class="attribute">args</span>": <span class="value">{"<span class="attribute">file</span>":<span class="value"><span class="string">"Packages/Default/Delete Line.sublime-macro"</span></span>} </span>},
+// 复制选中行到行后
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"ctrl+alt+down"</span>]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"duplicate_line"</span> </span>},
+// 选词(按住-继续选择下个相同的字符串)
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"ctrl+g"</span>]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"find_under_expand"</span> </span>},
+// gb一次选中所有的
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"ctrl+g"</span>, <span class="string">"ctrl+b"</span>]</span>,"<span class="attribute">command</span>": <span class="value"><span class="string">"find_all_under"</span> </span>},  &lt;/font&gt;
+// 自动提示、补全
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"alt+/"</span>]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"auto_complete"</span> </span>},
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"alt+/"</span>]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"replace_completion_with_auto_complete"</span></span>, "<span class="attribute">context</span>":
+<span class="value">[
+{ "<span class="attribute">key</span>": <span class="value"><span class="string">"last_command"</span></span>, "<span class="attribute">operator</span>":<span class="value"><span class="string">"equal"</span></span>, "<span class="attribute">operand</span>": <span class="value"><span class="string">"insert_best_completion"</span> </span>},
+{ "<span class="attribute">key</span>": <span class="value"><span class="string">"auto_complete_visible"</span></span>, "<span class="attribute">operator</span>":<span class="value"><span class="string">"equal"</span></span>, "<span class="attribute">operand</span>": <span class="value"><span class="literal">false</span> </span>},
+{ "<span class="attribute">key</span>": <span class="value"><span class="string">"setting.tab_completion"</span></span>, "<span class="attribute">operator</span>":<span class="value"><span class="string">"equal"</span></span>, "<span class="attribute">operand</span>": <span class="value"><span class="literal">true</span> </span>}
+]
+</span>},
+// 与上行互换
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"alt+up"</span>]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"swap_line_up"</span> </span>},
+// 与下行互换
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"alt+down"</span>]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"swap_line_down"</span> </span>},
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"alt+/"</span>,<span class="string">"alt+/"</span>]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"insert_best_completion"</span> </span>},
+//与tab键冲突，秒之
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"shift+tab"</span>]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"insert_best_completion"</span></span>, "<span class="attribute">args</span>": <span class="value">{"<span class="attribute">default</span>":<span class="value"><span class="string">"\t"</span></span>, "<span class="attribute">exact</span>": <span class="value"><span class="literal">true</span></span>} </span>},
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"shift+tab"</span>]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"insert_best_completion"</span></span>, "<span class="attribute">args</span>": <span class="value">{"<span class="attribute">default</span>":<span class="value"><span class="string">"\t"</span></span>, "<span class="attribute">exact</span>": <span class="value"><span class="literal">false</span></span>}</span>,
+"<span class="attribute">context</span>":
+<span class="value">[
+{ "<span class="attribute">key</span>": <span class="value"><span class="string">"setting.tab_completion"</span></span>, "<span class="attribute">operator</span>":<span class="value"><span class="string">"equal"</span></span>, "<span class="attribute">operand</span>": <span class="value"><span class="literal">true</span> </span>}
+]
+</span>},
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"shift+tab"</span>]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"replace_completion_with_next_completion"</span></span>, "<span class="attribute">context</span>":
+<span class="value">[
+{ "<span class="attribute">key</span>": <span class="value"><span class="string">"last_command"</span></span>, "<span class="attribute">operator</span>":<span class="value"><span class="string">"equal"</span></span>, "<span class="attribute">operand</span>": <span class="value"><span class="string">"insert_best_completion"</span> </span>},
+{ "<span class="attribute">key</span>": <span class="value"><span class="string">"setting.tab_completion"</span></span>, "<span class="attribute">operator</span>":<span class="value"><span class="string">"equal"</span></span>, "<span class="attribute">operand</span>": <span class="value"><span class="literal">true</span> </span>}
+]
+</span>},
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"shift+tab"</span>]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"reindent"</span></span>, "<span class="attribute">context</span>":
+<span class="value">[
+{ "<span class="attribute">key</span>": <span class="value"><span class="string">"setting.auto_indent"</span></span>, "<span class="attribute">operator</span>":<span class="value"><span class="string">"equal"</span></span>, "<span class="attribute">operand</span>": <span class="value"><span class="literal">true</span> </span>},
+{ "<span class="attribute">key</span>": <span class="value"><span class="string">"selection_empty"</span></span>, "<span class="attribute">operator</span>":<span class="value"><span class="string">"equal"</span></span>, "<span class="attribute">operand</span>": <span class="value"><span class="literal">true</span></span>, "<span class="attribute">match_all</span>": <span class="value"><span class="literal">true</span> </span>},
+{ "<span class="attribute">key</span>": <span class="value"><span class="string">"preceding_text"</span></span>, "<span class="attribute">operator</span>":<span class="value"><span class="string">"regex_match"</span></span>, "<span class="attribute">operand</span>": <span class="value"><span class="string">"^$"</span></span>,"<span class="attribute">match_all</span>": <span class="value"><span class="literal">true</span> </span>},
+{ "<span class="attribute">key</span>": <span class="value"><span class="string">"following_text"</span></span>, "<span class="attribute">operator</span>":<span class="value"><span class="string">"regex_match"</span></span>, "<span class="attribute">operand</span>": <span class="value"><span class="string">"^$"</span></span>,"<span class="attribute">match_all</span>": <span class="value"><span class="literal">true</span> </span>}
+]
+</span>},
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"shift+tab"</span>]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"indent"</span></span>, "<span class="attribute">context</span>":
+<span class="value">[
+{ "<span class="attribute">key</span>": <span class="value"><span class="string">"text"</span></span>, "<span class="attribute">operator</span>":<span class="value"><span class="string">"regex_contains"</span></span>, "<span class="attribute">operand</span>": <span class="value"><span class="string">"\n"</span> </span>}
+]
+</span>},
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"shift+tab"</span>]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"next_field"</span></span>, "<span class="attribute">context</span>":
+<span class="value">[
+{ "<span class="attribute">key</span>": <span class="value"><span class="string">"has_next_field"</span></span>, "<span class="attribute">operator</span>":<span class="value"><span class="string">"equal"</span></span>, "<span class="attribute">operand</span>": <span class="value"><span class="literal">true</span> </span>}
+]
+</span>},
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"shift+tab"</span>]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"commit_completion"</span></span>, "<span class="attribute">context</span>":
+<span class="value">[
+{ "<span class="attribute">key</span>": <span class="value"><span class="string">"auto_complete_visible"</span> </span>},
+{ "<span class="attribute">key</span>": <span class="value"><span class="string">"setting.auto_complete_commit_on_tab"</span> </span>}
+]
+</span>},
+//移动光标
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"alt+l"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"move"</span></span>,"<span class="attribute">args</span>": <span class="value">{"<span class="attribute">by</span>": <span class="value"><span class="string">"characters"</span></span>, "<span class="attribute">forward</span>":<span class="value"><span class="literal">false</span></span>} </span>},
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"alt+r"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"move"</span></span>,"<span class="attribute">args</span>": <span class="value">{"<span class="attribute">by</span>": <span class="value"><span class="string">"characters"</span></span>, "<span class="attribute">forward</span>":<span class="value"><span class="literal">true</span></span>} </span>},
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"alt+u"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"move"</span></span>,"<span class="attribute">args</span>": <span class="value">{"<span class="attribute">by</span>": <span class="value"><span class="string">"lines"</span></span>, "<span class="attribute">forward</span>":<span class="value"><span class="literal">false</span></span>} </span>},
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"alt+d"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"move"</span></span>,"<span class="attribute">args</span>": <span class="value">{"<span class="attribute">by</span>": <span class="value"><span class="string">"lines"</span></span>, "<span class="attribute">forward</span>":<span class="value"><span class="literal">true</span></span>} </span>},
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"shift+alt+l"</span> ]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"move"</span></span>, "<span class="attribute">args</span>": <span class="value">{"<span class="attribute">by</span>": <span class="value"><span class="string">"characters"</span></span>,"<span class="attribute">forward</span>": <span class="value"><span class="literal">false</span></span>, "<span class="attribute">extend</span>": <span class="value"><span class="literal">true</span></span>} </span>},
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"shift+alt+r"</span>]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"move"</span></span>, "<span class="attribute">args</span>": <span class="value">{"<span class="attribute">by</span>": <span class="value"><span class="string">"characters"</span></span>,"<span class="attribute">forward</span>": <span class="value"><span class="literal">true</span></span>, "<span class="attribute">extend</span>": <span class="value"><span class="literal">true</span></span>} </span>},
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"shift+alt+u"</span> ]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"move"</span></span>, "<span class="attribute">args</span>": <span class="value">{"<span class="attribute">by</span>": <span class="value"><span class="string">"lines"</span></span>,"<span class="attribute">forward</span>": <span class="value"><span class="literal">false</span></span>, "<span class="attribute">extend</span>": <span class="value"><span class="literal">true</span></span>} </span>},
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"shift+alt+d"</span> ]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"move"</span></span>, "<span class="attribute">args</span>": <span class="value">{"<span class="attribute">by</span>": <span class="value"><span class="string">"lines"</span></span>,"<span class="attribute">forward</span>": <span class="value"><span class="literal">true</span></span>, "<span class="attribute">extend</span>": <span class="value"><span class="literal">true</span></span>} </span>},
+//移动光标到行首或行末
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"alt+b"</span>]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"move_to"</span></span>, "<span class="attribute">args</span>": <span class="value">{"<span class="attribute">to</span>": <span class="value"><span class="string">"bol"</span></span>,"<span class="attribute">extend</span>": <span class="value"><span class="literal">false</span></span>} </span>},
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"alt+e"</span>]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"move_to"</span></span>, "<span class="attribute">args</span>": <span class="value">{"<span class="attribute">to</span>": <span class="value"><span class="string">"eol"</span></span>,"<span class="attribute">extend</span>": <span class="value"><span class="literal">false</span></span>} </span>},
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"shift+alt+b"</span>]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"move_to"</span></span>, "<span class="attribute">args</span>": <span class="value">{"<span class="attribute">to</span>": <span class="value"><span class="string">"bol"</span></span>,"<span class="attribute">extend</span>": <span class="value"><span class="literal">true</span></span>} </span>},
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"shift+alt+e"</span>]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"move_to"</span></span>, "<span class="attribute">args</span>": <span class="value">{"<span class="attribute">to</span>": <span class="value"><span class="string">"eol"</span></span>,"<span class="attribute">extend</span>": <span class="value"><span class="literal">true</span></span>} </span>},
+//滚屏
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"alt+g"</span>]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"scroll_lines"</span></span>, "<span class="attribute">args</span>": <span class="value">{"<span class="attribute">amount</span>": <span class="value"><span class="number">1.0</span> </span>} </span>},
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"alt+h"</span>]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"scroll_lines"</span></span>, "<span class="attribute">args</span>": <span class="value">{"<span class="attribute">amount</span>": <span class="value">-<span class="number">1.0</span> </span>} </span>},
+//缩进
+{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"shift+tab"</span>]</span>, "<span class="attribute">command</span>":<span class="value"><span class="string">"unindent"</span> </span>},
+]
+</code></pre><p>//=======================系统自带快捷键=======================//<br>//=============选择=============//<br>// Ctrl+L<br>// 选择整行(按住-继续选择下行)<br>//Ctrl+Shift+L<br>//鼠标选中多行，按下 同时编辑这些行<br>//鼠标中键<br>//拖动，选择多行<br>//Ctrl+左键点击<br>//同时选中多个节点进行编辑<br>//Ctrl+M<br>// 光标移动至括号内开始或结束的位置</p>
+<p>// Ctrl+Shift+M<br>// 选择括号内的内容(按住-继续选择父括号)<br>//=============窗口=============//<br>// SHIFT+ALT+数字<br>// 分割窗口</p>
+<p>//=============行处理=============//<br>// CTRL+J<br>// 合并行JOIN<br>// Ctrl+KU<br>// 改为大写</p>
+<p>// Ctrl+KL<br>// 改为小写<br>// Ctrl+KK<br>// 从光标处删除至行尾</p>
+<p>// Ctrl+Shift+D<br>// 复制光标所在整行，插入在该行之前</p>
+<p>// Ctrl+J<br>// 合并行(已选择需要合并的多行时)</p>
+<p>// Ctrl+/<br>// 注释整行(如已选择内容，同“Ctrl+Shift+/”效果)</p>
+<p>// Ctrl+Shift+/<br>// 注释已选择内容</p>
+<p>// Ctrl+Shift+V<br>// 粘贴并自动缩进(其它兄弟写的，实测win系统自动缩进无效)</p>
+<p>// Ctrl+M<br>// 光标跳至对应的括号</p>
+<p>// Alt+.<br>// 闭合当前标签</p>
+<p>// Ctrl+Shift+A<br>// 选择光标位置父标签对儿</p>
+<p>// Ctrl+Shift+[<br>// 折叠代码</p>
+<p>// Ctrl+Shift+]<br>// 展开代码</p>
+<p>// Ctrl+KT<br>// 折叠属性</p>
+<p>// Ctrl+K0<br>// 展开所有</p>
+<p>// Ctrl+U<br>// 软撤销</p>
+<p>// Ctrl+T<br>// 词互换</p>
+<p>// Ctrl+Enter<br>// 插入行后</p>
+<p>// Ctrl+Shift Enter<br>// 插入行前</p>
+<p>// Ctrl+K Backspace<br>// 从光标处删除至行首</p>
+<p>// Shift+Tab<br>// 去除缩进</p>
+<p>// Tab<br>// 缩进</p>
+<p>// F9<br>// 行排序(按a-z)</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Sublime/">Sublime</a>
+  </div>
+
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="https://github.com/bishyan/best.git/2015/06/07/Sublime-text3-自定义快捷键/" data-title="Sublime text3 自定义快捷键 | bishiyan&#39;s blog" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/06/07/让Sublime-Text2-支持浏览器中预览/"  title="让Sublime Text2 支持浏览器中预览">
+ <strong>NEXT:</strong><br/> 
+ <span>让Sublime Text2 支持浏览器中预览
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+  
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/Emmet/" title="Emmet">Emmet<sup>2</sup></a></li>
+		
+			<li><a href="/tags/Sublime/" title="Sublime">Sublime<sup>2</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<div class="social-font clearfix">
+		
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
+		
+		<a href="https://github.com/bishyan/best.git" target="_blank" title="bsy">bsy</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+  </body>
+</html>
