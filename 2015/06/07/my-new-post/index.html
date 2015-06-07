@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>my new post | bishiyan&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="2012-02-20SublimeAuthor: Jerry Qu让Sublime Text2支持浏览器中预览从Editplus转到Sublime Text2的同学，不知道有没觉得它少了个很有用的功能：view in browser（ctrl+b）。平时写点小demo时，那种一秒钟切浏览器看下效果，一秒后再切回来改下代码的爽快感，是我坚守Editplus多年的一大重要原因。Editplus提供的c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="my new post">
+<meta property="og:url" content="https://github.com/bishyan/best.git/2015/06/07/my-new-post/index.html">
+<meta property="og:site_name" content="bishiyan's blog">
+<meta property="og:description" content="2012-02-20SublimeAuthor: Jerry Qu让Sublime Text2支持浏览器中预览从Editplus转到Sublime Text2的同学，不知道有没觉得它少了个很有用的功能：view in browser（ctrl+b）。平时写点小demo时，那种一秒钟切浏览器看下效果，一秒后再切回来改下代码的爽快感，是我坚守Editplus多年的一大重要原因。Editplus提供的c">
+<meta property="og:updated_time" content="2015-06-07T13:25:59.756Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="my new post">
+<meta name="twitter:description" content="2012-02-20SublimeAuthor: Jerry Qu让Sublime Text2支持浏览器中预览从Editplus转到Sublime Text2的同学，不知道有没觉得它少了个很有用的功能：view in browser（ctrl+b）。平时写点小demo时，那种一秒钟切浏览器看下效果，一秒后再切回来改下代码的爽快感，是我坚守Editplus多年的一大重要原因。Editplus提供的c">
+  
+    <link rel="alternative" href="/atom.xml" title="bishiyan&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">bishiyan&#39;s blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Good Good Study,Day Day Up!</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://github.com/bishyan/best.git"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-my-new-post" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/06/07/my-new-post/" class="article-date">
+  <time datetime="2015-06-07T13:25:27.000Z" itemprop="datePublished">2015-06-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      my new post
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2012-02-20<br>Sublime<br>Author: Jerry Qu<br>让Sublime Text2支持浏览器中预览<br>从Editplus转到Sublime Text2的同学，不知道有没觉得它少了个很有用的功能：view in browser（ctrl+b）。平时写点小demo时，那种一秒钟切浏览器看下效果，一秒后再切回来改下代码的爽快感，是我坚守Editplus多年的一大重要原因。<br>Editplus提供的ctrl+b功能，好用的原因有二：一是内置了webbrowser，切换时不用离开编辑器；二是对于本地调试的web站点，配置规则后自动将编辑的文件映射为URL来预览，这对预览php等服务端文件非常有用。Mac下的Coda，也有类似的预览功能，但我一直用不习惯它，暂不考虑。<br>Sublime Text2支持用Python编写插件，我很想自己动手解决这个问题，但估计短期内我没可能研究出如何创建webbrowser嵌进ST2里，于是打算偷点懒，直接调系统默认浏览器预览。下面是我研究出来的详细步骤（想直接使用插件的同学请直接看最后）：<br>一、点击菜单Tools -&gt; New Plugin…，在创建好的py文件输入下列内容：<br>import sublime, sublime_plugin<br>import webbrowser</p>
+<p>url_map = {<br>   ‘D:\amp\apache2.4.12\htdocs\‘ : ‘<a href="http://localhost/" target="_blank" rel="external">http://localhost/</a>‘,<br>}</p>
+<p>class OpenBrowserCommand(sublime_plugin.TextCommand):<br>    def run(self,edit):<br>        window = sublime.active_window()<br>        window.run_command(‘save’)<br>        url = self.view.file_name()<br>        flag = False<br>        for path, domain in url_map.items():<br>            if url.startswith(path):<br>                url = url.replace(path, domain).replace(‘\‘, ‘\/‘)<br>                flag = True<br>                break<br>        if not flag:<br>            url = ‘file://‘ + url<br>        webbrowser.open_new(url)<br>代码只有几行，大部分还是参考的这个帖子，相信大家一眼就能看明白，不解释了。<br>将文件保存到Packages/User目录（Packages可通过菜单里的Browser Packages…打开），文件名随意，如open_browser.py。插件部分完工了。<br>二、接下来，为刚才的插件分配快捷键。点菜单Tools -&gt; Command Palette…，或者shift+cmd+p，打开命令集，选择“key Bindings - User”打开个人快捷键配置，输入下列内容：<br>[{ “keys”: [“ctrl+shift+b”], “command”: “open_browser” }]<br>这就是要做的全部工作，可以测试下了。打开一个html文件，ctrl+shift+b试试，没意外的话文件会在默认浏览器打开了。url_map里配置的站点目录到URL的映射应该也是可用的。<br>PS：如果要指定用什么浏览器预览，也可以将最后一行代码改成这样：<br>webbrowser.get(‘safari’).open_new(url)<br>webbrowser具体支持get哪些浏览器，可以通过webbrowser._browsers查看。只是，ST2默认使用的是python2.6，在我的mac os下，python2.6找不到任何可用的浏览器。2.7的webbrowser.py里多了一段patch，可以找到firefox和safari。好在，对我来说，能在默认浏览器预览已经够用了。<br>先写到这里，如果我哪天找到了更好的方法，再来补充。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://github.com/bishyan/best.git/2015/06/07/my-new-post/" data-id="ciami70fn0004dwjg2xdqm8wh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/06/07/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Emmet/">Emmet</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Emmet/" style="font-size: 10px;">Emmet</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/06/07/my-new-post/">my new post</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/07/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/07/前端开发必备-Emmet使用手册/">前端开发必备! Emmet使用手册</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 bsy<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
