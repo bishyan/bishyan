@@ -65,10 +65,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-my-new-post" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-new-new" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/06/07/my-new-post/" class="article-date">
-  <time datetime="2015-06-07T13:25:27.000Z" itemprop="datePublished">2015-06-07</time>
+    <a href="/2015/06/07/new-new/" class="article-date">
+  <time datetime="2015-06-07T15:16:46.000Z" itemprop="datePublished">2015-06-07</time>
 </a>
     
   </div>
@@ -79,7 +79,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/06/07/my-new-post/">my new post</a>
+      <a class="article-title" href="/2015/06/07/new-new/">new new </a>
     </h1>
   
 
@@ -87,16 +87,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>2012-02-20<br>Sublime<br>Author: Jerry Qu<br>让Sublime Text2支持浏览器中预览<br>从Editplus转到Sublime Text2的同学，不知道有没觉得它少了个很有用的功能：view in browser（ctrl+b）。平时写点小demo时，那种一秒钟切浏览器看下效果，一秒后再切回来改下代码的爽快感，是我坚守Editplus多年的一大重要原因。<br>Editplus提供的ctrl+b功能，好用的原因有二：一是内置了webbrowser，切换时不用离开编辑器；二是对于本地调试的web站点，配置规则后自动将编辑的文件映射为URL来预览，这对预览php等服务端文件非常有用。Mac下的Coda，也有类似的预览功能，但我一直用不习惯它，暂不考虑。<br>Sublime Text2支持用Python编写插件，我很想自己动手解决这个问题，但估计短期内我没可能研究出如何创建webbrowser嵌进ST2里，于是打算偷点懒，直接调系统默认浏览器预览。下面是我研究出来的详细步骤（想直接使用插件的同学请直接看最后）：<br>一、点击菜单Tools -&gt; New Plugin…，在创建好的py文件输入下列内容：<br>import sublime, sublime_plugin<br>import webbrowser</p>
-<p>url_map = {<br>   ‘D:\amp\apache2.4.12\htdocs\‘ : ‘<a href="http://localhost/" target="_blank" rel="external">http://localhost/</a>‘,<br>}</p>
-<p>class OpenBrowserCommand(sublime_plugin.TextCommand):<br>    def run(self,edit):<br>        window = sublime.active_window()<br>        window.run_command(‘save’)<br>        url = self.view.file_name()<br>        flag = False<br>        for path, domain in url_map.items():<br>            if url.startswith(path):<br>                url = url.replace(path, domain).replace(‘\‘, ‘\/‘)<br>                flag = True<br>                break<br>        if not flag:<br>            url = ‘file://‘ + url<br>        webbrowser.open_new(url)<br>代码只有几行，大部分还是参考的这个帖子，相信大家一眼就能看明白，不解释了。<br>将文件保存到Packages/User目录（Packages可通过菜单里的Browser Packages…打开），文件名随意，如open_browser.py。插件部分完工了。<br>二、接下来，为刚才的插件分配快捷键。点菜单Tools -&gt; Command Palette…，或者shift+cmd+p，打开命令集，选择“key Bindings - User”打开个人快捷键配置，输入下列内容：<br>[{ “keys”: [“ctrl+shift+b”], “command”: “open_browser” }]<br>这就是要做的全部工作，可以测试下了。打开一个html文件，ctrl+shift+b试试，没意外的话文件会在默认浏览器打开了。url_map里配置的站点目录到URL的映射应该也是可用的。<br>PS：如果要指定用什么浏览器预览，也可以将最后一行代码改成这样：<br>webbrowser.get(‘safari’).open_new(url)<br>webbrowser具体支持get哪些浏览器，可以通过webbrowser._browsers查看。只是，ST2默认使用的是python2.6，在我的mac os下，python2.6找不到任何可用的浏览器。2.7的webbrowser.py里多了一段patch，可以找到firefox和safari。好在，对我来说，能在默认浏览器预览已经够用了。<br>先写到这里，如果我哪天找到了更好的方法，再来补充。</p>
+        <p>heheoejoeoeefdfddfdf  test </p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/bishyan/best.git/2015/06/07/my-new-post/" data-id="ciaml3oe10004esjgt5q7jxem" class="article-share-link">Share</a>
+      <a data-url="https://github.com/bishyan/best.git/2015/06/07/new-new/" data-id="ciamm5urv0007uwjguovqa3fu" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Emmet/">Emmet</a></li></ul>
+
     </footer>
   </div>
   
@@ -107,7 +107,7 @@
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/06/07/hello-world/" class="article-date">
-  <time datetime="2015-06-07T12:08:37.462Z" itemprop="datePublished">2015-06-07</time>
+  <time datetime="2015-06-07T14:59:39.979Z" itemprop="datePublished">2015-06-07</time>
 </a>
     
   </div>
@@ -139,9 +139,120 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/bishyan/best.git/2015/06/07/hello-world/" data-id="ciaml3ocx0000esjgdhc72nyj" class="article-share-link">Share</a>
+      <a data-url="https://github.com/bishyan/best.git/2015/06/07/hello-world/" data-id="ciamm5uqz0000uwjgdfv9huoo" class="article-share-link">Share</a>
       
       
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-my-new-post" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/06/07/my-new-post/" class="article-date">
+  <time datetime="2015-06-07T13:25:27.000Z" itemprop="datePublished">2015-06-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/07/my-new-post/">my new post</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2012-02-20<br>Sublime<br>Author: Jerry Qu<br>让Sublime Text2支持浏览器中预览<br>从Editplus转到Sublime Text2的同学，不知道有没觉得它少了个很有用的功能：view in browser（ctrl+b）。平时写点小demo时，那种一秒钟切浏览器看下效果，一秒后再切回来改下代码的爽快感，是我坚守Editplus多年的一大重要原因。<br>Editplus提供的ctrl+b功能，好用的原因有二：一是内置了webbrowser，切换时不用离开编辑器；二是对于本地调试的web站点，配置规则后自动将编辑的文件映射为URL来预览，这对预览php等服务端文件非常有用。Mac下的Coda，也有类似的预览功能，但我一直用不习惯它，暂不考虑。<br>Sublime Text2支持用Python编写插件，我很想自己动手解决这个问题，但估计短期内我没可能研究出如何创建webbrowser嵌进ST2里，于是打算偷点懒，直接调系统默认浏览器预览。下面是我研究出来的详细步骤（想直接使用插件的同学请直接看最后）：<br>一、点击菜单Tools -&gt; New Plugin…，在创建好的py文件输入下列内容：<br>import sublime, sublime_plugin<br>import webbrowser</p>
+<p>url_map = {<br>   ‘D:\amp\apache2.4.12\htdocs\‘ : ‘<a href="http://localhost/" target="_blank" rel="external">http://localhost/</a>‘,<br>}</p>
+<p>class OpenBrowserCommand(sublime_plugin.TextCommand):<br>    def run(self,edit):<br>        window = sublime.active_window()<br>        window.run_command(‘save’)<br>        url = self.view.file_name()<br>        flag = False<br>        for path, domain in url_map.items():<br>            if url.startswith(path):<br>                url = url.replace(path, domain).replace(‘\‘, ‘\/‘)<br>                flag = True<br>                break<br>        if not flag:<br>            url = ‘file://‘ + url<br>        webbrowser.open_new(url)<br>代码只有几行，大部分还是参考的这个帖子，相信大家一眼就能看明白，不解释了。<br>将文件保存到Packages/User目录（Packages可通过菜单里的Browser Packages…打开），文件名随意，如open_browser.py。插件部分完工了。<br>二、接下来，为刚才的插件分配快捷键。点菜单Tools -&gt; Command Palette…，或者shift+cmd+p，打开命令集，选择“key Bindings - User”打开个人快捷键配置，输入下列内容：<br>[{ “keys”: [“ctrl+shift+b”], “command”: “open_browser” }]<br>这就是要做的全部工作，可以测试下了。打开一个html文件，ctrl+shift+b试试，没意外的话文件会在默认浏览器打开了。url_map里配置的站点目录到URL的映射应该也是可用的。<br>PS：如果要指定用什么浏览器预览，也可以将最后一行代码改成这样：<br>webbrowser.get(‘safari’).open_new(url)<br>webbrowser具体支持get哪些浏览器，可以通过webbrowser._browsers查看。只是，ST2默认使用的是python2.6，在我的mac os下，python2.6找不到任何可用的浏览器。2.7的webbrowser.py里多了一段patch，可以找到firefox和safari。好在，对我来说，能在默认浏览器预览已经够用了。<br>先写到这里，如果我哪天找到了更好的方法，再来补充。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://github.com/bishyan/best.git/2015/06/07/my-new-post/" data-id="ciamm5urw0009uwjglxbh5uky" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-让Sublime-Text2-支持浏览器中预览" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/06/07/让Sublime-Text2-支持浏览器中预览/" class="article-date">
+  <time datetime="2015-06-07T02:09:06.000Z" itemprop="datePublished">2015-06-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/07/让Sublime-Text2-支持浏览器中预览/">让Sublime Text2 支持浏览器中预览</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2012-02-20<br>Sublime<br>Author: Jerry Qu</p>
+<hr>
+<p>从Editplus转到Sublime Text2的同学，不知道有没觉得它少了个很有用的功能：view in browser（ctrl+b）。平时写点小demo时，那种一秒钟切浏览器看下效果，一秒后再切回来改下代码的爽快感，是我坚守Editplus多年的一大重要原因。<br>Editplus提供的ctrl+b功能，好用的原因有二：一是内置了webbrowser，切换时不用离开编辑器；二是对于本地调试的web站点，配置规则后自动将编辑的文件映射为URL来预览，这对预览php等服务端文件非常有用。Mac下的Coda，也有类似的预览功能，但我一直用不习惯它，暂不考虑。<br>Sublime Text2支持用Python编写插件，我很想自己动手解决这个问题，但估计短期内我没可能研究出如何创建webbrowser嵌进ST2里，于是打算偷点懒，直接调系统默认浏览器预览。下面是我研究出来的详细步骤（想直接使用插件的同学请直接看最后）：</p>
+<h2 id="一、点击菜单Tools_-&gt;_New_Plugin…，在创建好的py文件输入下列内容："><font color="red">一、点击菜单Tools -&gt; New Plugin…，在创建好的py文件输入下列内容：</font></h2><pre><code><span class="keyword">import</span> sublime, sublime_plugin
+<span class="keyword">import</span> webbrowser
+
+url_map = {
+   <span class="string">'D:\\amp\\apache2.4.12\\htdocs\\'</span> : <span class="string">'http://localhost/'</span>,
+}
+
+<span class="class"><span class="keyword">class</span> <span class="title">OpenBrowserCommand</span><span class="params">(sublime_plugin.TextCommand)</span>:</span>
+    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self,edit)</span>:</span>
+        window = sublime.active_window()
+        window.run_command(<span class="string">'save'</span>)
+        url = self.view.file_name()
+        flag = <span class="keyword">False</span>
+        <span class="keyword">for</span> path, domain <span class="keyword">in</span> url_map.items():
+            <span class="keyword">if</span> url.startswith(path):
+                url = url.replace(path, domain).replace(<span class="string">'\\'</span>, <span class="string">'\/'</span>)
+                flag = <span class="keyword">True</span>
+                <span class="keyword">break</span>
+        <span class="keyword">if</span> <span class="keyword">not</span> flag:
+            url = <span class="string">'file://'</span> + url
+        webbrowser.open_new(url)
+</code></pre><p>代码只有几行，大部分还是参考的<a href="http://www.sublimetext.com/forum/viewtopic.php?f=2&amp;t=3851" target="_blank" rel="external">这个帖子</a>，相信大家一眼就能看明白，不解释了。<br>将文件保存到Packages/User目录（Packages可通过菜单里的Browser Packages…打开），文件名随意，如open_browser.py。插件部分完工了。</p>
+<hr>
+<p><strong>二、接下来，为刚才的插件分配快捷键。点菜单Tools -&gt; Command Palette…，或者shift+cmd+p，打开命令集，选择“key Bindings - User”打开个人快捷键配置，输入下列内容:</strong></p>
+<pre><code>[{ "<span class="attribute">keys</span>": <span class="value">[<span class="string">"ctrl+shift+b"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"open_browser"</span> </span>}]
+</code></pre><p>这就是要做的全部工作，可以测试下了。打开一个html文件，ctrl+shift+b试试，没意外的话文件会在默认浏览器打开了。url_map里配置的站点目录到URL的映射应该也是可用的。<br>PS：如果要指定用什么浏览器预览，也可以将最后一行代码改成这样：</p>
+<pre><code>webbrowser.<span class="function"><span class="title">get</span><span class="params">(<span class="string">'safari'</span>)</span></span>.<span class="function"><span class="title">open_new</span><span class="params">(url)</span></span>
+</code></pre><p>webbrowser具体支持get哪些浏览器，可以通过webbrowser._browsers查看。只是，ST2默认使用的是python2.6，在我的mac os下，python2.6找不到任何可用的浏览器。2.7的webbrowser.py里多了一段patch，可以找到firefox和safari。好在，对我来说，能在默认浏览器预览已经够用了。<br>先写到这里，如果我哪天找到了更好的方法，再来补充。</p>
+<p>update @ 2012-02-23：在月影的帮助下，加上了预览前先保存的功能，正文里代码已更新，并已提交到github，可以直接下载使用，<a href="https://github.com/qgy18/sublime-view-in-browser。">https://github.com/qgy18/sublime-view-in-browser。</a></p>
+<h2 id="update_@_2013-06-30：今天sublime_text3开始了beta公测，st3使用的是python3。经测试，本文代码依然可用，只是如果url不是http协议，需要加上file://，正文里代码已更新。">update @ 2013-06-30：今天sublime text3开始了beta公测，st3使用的是python3。经测试，本文代码依然可用，只是如果url不是http协议，需要加上file://，正文里代码已更新。</h2><p>本文链接：<a href="https://www.imququ.com/post/view-sublime-text-2-file-in-browser.html" target="_blank" rel="external">https://www.imququ.com/post/view-sublime-text-2-file-in-browser.html</a></p>
+<p>—EOF—</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://github.com/bishyan/best.git/2015/06/07/让Sublime-Text2-支持浏览器中预览/" data-id="ciamm5urn0001uwjglm8hoykc" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sublime/">Sublime</a></li></ul>
+
     </footer>
   </div>
   
@@ -552,7 +663,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/bishyan/best.git/2015/06/07/前端开发必备-Emmet使用手册/" data-id="ciaml3odw0001esjgyh96ygrz" class="article-share-link">Share</a>
+      <a data-url="https://github.com/bishyan/best.git/2015/06/07/前端开发必备-Emmet使用手册/" data-id="ciamm5urs0004uwjg99spgcgx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Emmet/">Emmet</a></li></ul>
@@ -575,7 +686,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Emmet/">Emmet</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Emmet/">Emmet</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime/">Sublime</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -584,7 +695,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Emmet/" style="font-size: 10px;">Emmet</a>
+      <a href="/tags/Emmet/" style="font-size: 20px;">Emmet</a> <a href="/tags/Sublime/" style="font-size: 10px;">Sublime</a>
     </div>
   </div>
 
@@ -593,7 +704,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a><span class="archive-list-count">5</span></li></ul>
     </div>
   </div>
 
@@ -605,11 +716,19 @@
       <ul>
         
           <li>
-            <a href="/2015/06/07/my-new-post/">my new post</a>
+            <a href="/2015/06/07/new-new/">new new </a>
           </li>
         
           <li>
             <a href="/2015/06/07/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/07/my-new-post/">my new post</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/07/让Sublime-Text2-支持浏览器中预览/">让Sublime Text2 支持浏览器中预览</a>
           </li>
         
           <li>
