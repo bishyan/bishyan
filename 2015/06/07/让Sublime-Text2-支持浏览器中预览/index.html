@@ -52,7 +52,7 @@
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
 						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
-						<input type="hidden" name="q" value="site:github.com/bishyan/best.git">
+						<input type="hidden" name="q" value="site:bishyan.github.io">
 					</form>
 					
 					</li>
@@ -71,7 +71,7 @@
   </h1>
   <p class="article-author">By
     
-      <a href="https://github.com/bishyan/best.git" title="bsy">bsy</a>
+      <a href="http://bishyan.github.io" title="bsy">bsy</a>
     </p>
   <p class="article-time">
     <time datetime="2015-06-07T02:09:06.000Z" itemprop="datePublished">2015-06-07</time>
@@ -118,7 +118,7 @@ url_map = {
 </code></pre><p>这就是要做的全部工作，可以测试下了。打开一个html文件，ctrl+shift+b试试，没意外的话文件会在默认浏览器打开了。url_map里配置的站点目录到URL的映射应该也是可用的。<br>PS：如果要指定用什么浏览器预览，也可以将最后一行代码改成这样：</p>
 <pre><code>webbrowser.<span class="function"><span class="title">get</span><span class="params">(<span class="string">'safari'</span>)</span></span>.<span class="function"><span class="title">open_new</span><span class="params">(url)</span></span>
 </code></pre><p>webbrowser具体支持get哪些浏览器，可以通过webbrowser._browsers查看。只是，ST2默认使用的是python2.6，在我的mac os下，python2.6找不到任何可用的浏览器。2.7的webbrowser.py里多了一段patch，可以找到firefox和safari。好在，对我来说，能在默认浏览器预览已经够用了。<br>先写到这里，如果我哪天找到了更好的方法，再来补充。</p>
-<p>update @ 2012-02-23：在月影的帮助下，加上了预览前先保存的功能，正文里代码已更新，并已提交到github，可以直接下载使用，<a href="https://github.com/qgy18/sublime-view-in-browser。">https://github.com/qgy18/sublime-view-in-browser。</a></p>
+<p>update @ 2012-02-23：在月影的帮助下，加上了预览前先保存的功能，正文里代码已更新，并已提交到github，可以直接下载使用，<a href="https://github.com/qgy18/sublime-view-in-browser。" target="_blank" rel="external">https://github.com/qgy18/sublime-view-in-browser。</a></p>
 <h2 id="update_@_2013-06-30：今天sublime_text3开始了beta公测，st3使用的是python3。经测试，本文代码依然可用，只是如果url不是http协议，需要加上file://，正文里代码已更新。">update @ 2013-06-30：今天sublime text3开始了beta公测，st3使用的是python3。经测试，本文代码依然可用，只是如果url不是http协议，需要加上file://，正文里代码已更新。</h2><p>本文链接：<a href="https://www.imququ.com/post/view-sublime-text-2-file-in-browser.html" target="_blank" rel="external">https://www.imququ.com/post/view-sublime-text-2-file-in-browser.html</a></p>
 <p>—EOF—</p>
   
@@ -135,7 +135,7 @@ url_map = {
 
 <div class="article-share" id="share">
 
-  <div data-url="https://github.com/bishyan/best.git/2015/06/07/让Sublime-Text2-支持浏览器中预览/" data-title="让Sublime Text2 支持浏览器中预览 | bishiyan&#39;s blog" data-tsina="null" class="share clearfix">
+  <div data-url="http://bishyan.github.io/2015/06/07/让Sublime-Text2-支持浏览器中预览/" data-title="让Sublime Text2 支持浏览器中预览 | bishiyan&#39;s blog" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -208,14 +208,18 @@ url_map = {
 	
 	<div class="social-font clearfix">
 		
+		<a href="http://weibo.com/e.g. 436062867 for http://weibo.com/436062867" target="_blank" title="weibo"></a>
 		
+		
+		
+		<a href="https://github.com/e.g. A-limon for https://github.com/A-limon" target="_blank" title="github"></a>
 		
 		
 		
 	</div>
 		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
 		
-		<a href="https://github.com/bishyan/best.git" target="_blank" title="bsy">bsy</a>
+		<a href="http://bishyan.github.io" target="_blank" title="bsy">bsy</a>
 		
 		</p>
 </div>
