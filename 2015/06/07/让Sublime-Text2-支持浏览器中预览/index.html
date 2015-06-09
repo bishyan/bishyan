@@ -8,7 +8,7 @@
   
   <meta name="description" content="2012-02-20SublimeAuthor: Jerry Qu
 
-从Editplus转到Sublime Text2的同学，不知道有没觉得它少了个很有用的功能：view in browser（ctrl+b）。平时写点小demo时，那种一秒钟切浏览器看下效果，一秒后再切回来改下代码的爽快感，是我坚守">
+从Editplus转到Sublime Text2的同学，不知道有没觉得它少了个很有用的功能：view in browser（ctrl+b）。平时写点小demo时，那种一秒钟切浏览器看下效果，一秒后再切回来改下代码的爽快感，是我坚守Editplus多年的一大重要原因。Editplus提供的ctrl+b功能，好用的原因有二：一是内置了webbrowser，切换时不用离开编辑器；二是对于本地调试的web站点，配置规则后自动将编辑的文件映射为URL来预览，这对预览php等服务端文件非常有用。Mac下的Coda，也有类似的预览功能，但我一直用不习惯它，暂不考虑。Sublime Text2支持用Python编写插件，我很想自己动手解决这个问题，但估计短期内我没可能研究出如何创建webbrowser嵌进ST2里，于是打算偷点懒，直接调系统默认浏览器预览。下面是我研究出来的详细步骤（想直接使用插件的同学请直接看最后）：">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -65,6 +65,7 @@
         <p>2012-02-20<br>Sublime<br>Author: Jerry Qu</p>
 <hr>
 <p>从Editplus转到Sublime Text2的同学，不知道有没觉得它少了个很有用的功能：view in browser（ctrl+b）。平时写点小demo时，那种一秒钟切浏览器看下效果，一秒后再切回来改下代码的爽快感，是我坚守Editplus多年的一大重要原因。<br>Editplus提供的ctrl+b功能，好用的原因有二：一是内置了webbrowser，切换时不用离开编辑器；二是对于本地调试的web站点，配置规则后自动将编辑的文件映射为URL来预览，这对预览php等服务端文件非常有用。Mac下的Coda，也有类似的预览功能，但我一直用不习惯它，暂不考虑。<br>Sublime Text2支持用Python编写插件，我很想自己动手解决这个问题，但估计短期内我没可能研究出如何创建webbrowser嵌进ST2里，于是打算偷点懒，直接调系统默认浏览器预览。下面是我研究出来的详细步骤（想直接使用插件的同学请直接看最后）：</p>
+<a id="more"></a>
 <h2 id="一、点击菜单Tools_-&gt;_New_Plugin…，在创建好的py文件输入下列内容："><font color="red">一、点击菜单Tools -&gt; New Plugin…，在创建好的py文件输入下列内容：</font></h2><pre><code><span class="keyword">import</span> sublime, sublime_plugin
 <span class="keyword">import</span> webbrowser
 
